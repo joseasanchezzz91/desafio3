@@ -46,10 +46,10 @@ function Consumer() {
                 
                 <Button event={handleViewForm} estilo="btn btn-success">Agregar Heroe</Button>
                 </div>
-                        <div className="col-md-6">
+                {viewForm &&    <div className="col-md-6">
 
-                {viewForm && <Formulario handleSubmit={handleSubmit} />}
-                        </div>
+               <Formulario handleSubmit={handleSubmit}  /> 
+                        </div>}
             </div>
         </Fragment>
     );

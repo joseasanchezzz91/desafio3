@@ -23,7 +23,8 @@ function List() {
 
         const newdata = lista.filter(r => r !== e);
         setLista(newdata);
-        setRing(false);
+        const val=ring;
+        setRing(!val);
     };
 
     /**
@@ -31,10 +32,8 @@ function List() {
      * @param {Object} objeto a mover al final
      */
     const handleKill = e => {
-
         const datakill = e;
         datakill["kill"] = true;
-
         const newdata = lista.filter(r => r !== e);
         newdata.push(datakill);
         setLista(newdata);
@@ -57,14 +56,16 @@ function List() {
         data.push(obj);
         setLista(data);
         console.log('lista nueva', lista);
-        setViewForm(false);
+        const val = viewForm;
+        setViewForm(!val);
     }
 /**
  * Funcion que muestra el formulario
  *
  */
     const handleViewForm = () => {
-        setViewForm(true);
+        const val = viewForm;
+        setViewForm(!val);
     }
 
     const data = {
